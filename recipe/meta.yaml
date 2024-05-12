@@ -18,7 +18,7 @@ requirements:
     - {{ compiler('c') }}
     - make
     - cmake
-    - rust >=1.64.0
+    - {{ compiler('rust') }}
     - protobuf
   run:
    - __osx >={{ MACOSX_DEPLOYMENT_TARGET|default("10.13") }}  # [osx and x86_64]
