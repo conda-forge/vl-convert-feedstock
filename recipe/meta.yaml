@@ -1,5 +1,5 @@
 {% set name = "vl-convert" %}
-{% set version = "1.2.0" %}
+{% set version = "1.2.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/vega/vl-convert/archive/refs/tags/vl-convert@{{ version }}.tar.gz
-  sha256: 19a33b8ac20fd1a071a8a5d9b0afcc9e53c2aef21652a07614355352bed47a1d
+  sha256: 71004dc3c8fbd2f855024a1a72333223dce42f8b40bc277aa41c64c94eb8aeb9
 
 build:
   number: 0
@@ -21,7 +21,7 @@ requirements:
     - rust >=1.64.0
     - protobuf
   run:
-   - __osx >={{ MACOSX_DEPLOYMENT_TARGET|default("10.13") }}  # [osx and x86_64]
+    - __osx >={{ MACOSX_DEPLOYMENT_TARGET|default("10.13") }} # [osx and x86_64]
 
 test:
   commands:
@@ -31,11 +31,11 @@ about:
   home: https://github.com/vega/vl-convert
   license: BSD-3-Clause
   license_family: BSD
-  license_file: 
-      - vl-convert/LICENSE
-      - vl-convert/thirdparty_font.md
-      - vl-convert/thirdparty_javascript.md
-      - vl-convert/thirdparty_rust.yaml
+  license_file:
+    - vl-convert/LICENSE
+    - vl-convert/thirdparty_font.md
+    - vl-convert/thirdparty_javascript.md
+    - vl-convert/thirdparty_rust.yaml
   summary: A tool for converting Vega-Lite chart specifications into static images (SVG or PNG) or Vega chart specifications.
   description: |
     A tool for converting Vega-Lite chart specifications into static images (SVG or PNG) or Vega chart specifications.
